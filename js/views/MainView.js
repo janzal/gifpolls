@@ -7,21 +7,26 @@ import {
 import styles from './styles';
 
 import HomeView from './HomeView';
+import CreateChannelView from './CreateChannelView';
+import ChannelView from './ChannelView';
 
 export default class MainView extends Component {
-    renderScene(route, navigator) {
-      console.log(route);
+    renderScene(route, nav) {
       const routes = {
-        home: <HomeView />
+        home: <HomeView navigator={nav} {...route.passProps} />,
+        create: <CreateChannelView navigator={nav} {...route.passProps} />,
+        channel: <ChannelView navigator={nav} {...route.passProps} />
       };
 
       return routes[route.name];
     }
 
     render() {
+      const initialRoute = { name: 'channel', passProps: { channelName: 'test' } };
+      // const initialRoute = { name: 'home' };
       return (
-        <Navigator initialRoute={{ name: 'home', index: 0}}
-          renderScene={this.renderScene} />
+        <Navigator initialRoute={initialRoute}
+          renderScene={(route, nav) => this.renderScene(route, nav)} />
       )
     }
 }

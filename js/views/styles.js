@@ -2,19 +2,42 @@ import {React, StyleSheet} from 'react-native';
 
 export default styles = StyleSheet.create({
   container: {
-    flex: 1,
+    backgroundColor: '#F7EEF0',
+    flex: 1
+  },
+  homeContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#6596AE',
+    backgroundColor: '#F7EEF0',
   },
-  welcome: {
+  header: {
     fontSize: 30,
     textAlign: 'center',
     margin: 10,
-    color: '#CAE1EC'
+    color: '#EA5779'
+  },
+  loginContainer: {
+    flex: 2,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  votingTitle: {
+    fontSize: 20
+  },
+  footer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 30
+  },
+  author: {
+    fontSize: 10,
+    color: '#D2B9BF'
+  },
+  channelHeader: {
+    marginTop: 20
   },
   input: {
-    backgroundColor: '#FFC121',
+    backgroundColor: '#FFFFFF',
     height: 40,
     fontSize: 20
   },
@@ -29,13 +52,16 @@ export default styles = StyleSheet.create({
   },
   button: {
     padding: 10,
-    backgroundColor: '#C42900',
+    backgroundColor: '#F94871',
     justifyContent: 'center',
     alignItems: 'center'
   },
   buttonText: {
     color: '#FFFFFF',
     fontSize: 20
+  },
+  joinButton: {
+    backgroundColor: '#3FAA87'
   },
   createButton: {
     marginTop: 50
