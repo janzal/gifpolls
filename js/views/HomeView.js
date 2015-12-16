@@ -32,6 +32,12 @@ export default class HomeView extends Component {
     });
   }
 
+  handleCreatePress_() {
+    this.props.navigator.push({
+      name: 'create'
+    });
+  }
+
   render() {
     return (
       <View style={[styles.container, styles.homeContainer]}>
@@ -53,7 +59,7 @@ export default class HomeView extends Component {
               </View>
             </TouchableHighlight>
 
-            <TouchableHighlight style={styles.createButton}>
+            <TouchableHighlight style={[{ marginTop: 100 }, styles.createButton]} onPress={this.handleCreatePress_.bind(this)}>
               <View style={styles.button}>
                 <Text style={styles.buttonText}>Create</Text>
               </View>

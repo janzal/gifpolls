@@ -22,8 +22,9 @@ export default class MainView extends Component {
     }
 
     render() {
-      const initialRoute = { name: 'channel', passProps: { channelName: 'test' } };
-      // const initialRoute = { name: 'home' };
+      // const initialRoute = { name: 'channel', passProps: { channelName: 'HelloAdelle' } };
+      const initialRoute = { name: 'home' };
+      // const initialRoute = { name: 'create' };
       return (
         <Navigator initialRoute={initialRoute}
           renderScene={(route, nav) => this.renderScene(route, nav)} />

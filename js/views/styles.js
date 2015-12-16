@@ -39,7 +39,8 @@ export default styles = StyleSheet.create({
   input: {
     backgroundColor: '#FFFFFF',
     height: 40,
-    fontSize: 20
+    fontSize: 20,
+    padding: 2
   },
   channelInput: {
     marginBottom: 2,
@@ -47,7 +48,7 @@ export default styles = StyleSheet.create({
   },
   channelActions: {
     marginTop: 10,
-    width: 180,
+    width: 250,
     alignSelf: 'center'
   },
   button: {
@@ -62,8 +63,5 @@ export default styles = StyleSheet.create({
   },
   joinButton: {
     backgroundColor: '#3FAA87'
-  },
-  createButton: {
-    marginTop: 50
   }
 });
