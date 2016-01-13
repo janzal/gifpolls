@@ -8,6 +8,8 @@
   "dependencies": {
     "firebase": "^2.3.2",
     "flux": "^2.1.1",
+    "gravatar": "^1.4.0",
+    "md5": "^2.0.0",
     "react-native": "^0.16.0",
     "react-native-chart": "0.0.4"
   }

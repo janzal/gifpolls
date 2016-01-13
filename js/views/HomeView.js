@@ -14,7 +14,8 @@ export default class HomeView extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      channelName: ''
+      channelName: 'jjj',
+      userEmail: 'honzicekz@gmail.com'
     };
   }
 
@@ -24,10 +25,16 @@ export default class HomeView extends Component {
       return;
     }
 
+    if (!this.state.userEmail) {
+      AlertIOS.alert('Email', 'You must enter an email');
+      return;
+    }
+
     this.props.navigator.push({
       name: 'channel',
       passProps: {
-        channelName: this.state.channelName
+        channelName: this.state.channelName,
+        userEmail: this.state.userEmail
       }
     });
   }
@@ -50,7 +57,18 @@ export default class HomeView extends Component {
               onChangeText={(channelName) => this.setState({
                 channelName
               })}
+              placeholder="Channel name"
               value={this.state.channelName}
+              />
+            <TextInput style={[styles.input, styles.channelInput]}
+              autoCapitalize="none"
+              placeholder="Email"
+              keyboardType="email-address"
+              autoCorrect={false}
+              onChangeText={(userEmail) => this.setState({
+                userEmail
+              })}
+              value={this.state.userEmail}
               />
 
             <TouchableHighlight onPress={this.handleJoinPress_.bind(this)}>
