@@ -14,8 +14,8 @@ export default class HomeView extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      channelName: 'jjj',
-      userEmail: 'honzicekz@gmail.com'
+      channelName: '',
+      userEmail: ''
     };
   }
 

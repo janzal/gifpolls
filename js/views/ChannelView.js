@@ -57,7 +57,8 @@ export default class ChannelView extends Component {
 
     PollsRepository().setUsersChangesListener(this.props.channelName, snapshot => {
       const val = snapshot.val();
-      const users = val.users || [];
+      // const users = val.users || [];
+      const users = [];
 
       LayoutAnimation.spring();
       this.setState({ users });
